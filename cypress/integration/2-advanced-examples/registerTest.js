@@ -28,9 +28,6 @@ describe('Registration Functionality Test',function(){
         cy.get('input[name="dateOfBirth"]').type('01.01.1991');
         cy.get('div.form-radio-button:nth-child(1)').click();
       const d = new Date();
-    //   const time = require("dayjs");
-    //   const timeFormatted = time().format("hh:mm:ss");
-    //   cy.log(timeFormatted);
       const dateFormatted = d.toLocaleString().replaceAll('/','_').replaceAll(' ','_').replaceAll(':','_').replaceAll(',','');
       cy.log(dateFormatted);
       
@@ -38,8 +35,8 @@ describe('Registration Functionality Test',function(){
         cy.get('div.registration__email input[name="email"]').type(email);
         cy.get('div.registration__password input[name="password"]').type('Welcome@1234');
         cy.get('button.button.registration__button').click();
-        cy.wait(3000);
-      cy.get('input.input__input.search-box__input-text').invoke('attr','placeholder').should('eq',fname+', wonach suchst du?');
+        cy.wait(5000);
+       cy.get('input.input__input.search-box__input-text').invoke('attr','placeholder').should('eq',fname+', wonach suchst du?');
         
     })
 
