@@ -1,6 +1,6 @@
 describe('Login Functionality Tests',function()
 {
-    before(() => {
+    beforeEach(() => {
 
         cy.visit("https://www.douglas.de/de");
         cy.get('div.uc-overlay__buttons button.button__primary').click();
