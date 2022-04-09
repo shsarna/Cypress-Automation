@@ -6,7 +6,7 @@ Given User is at douglas login registration page
 Scenario: As an user with correct credentials I would like to be able to login to the web shop
 When User enters username as 'testUser@douglasTest.com' and password as 'Welcome@1234'
 And User clicks on login button
-Then User is able to successfully login to the Website
+Then User should be logged in with first name as 'testUser'
 
 Scenario: As a user I would like to receive an error message, if I enter wrong credentials.
 When User enters username as 'testUser@douglasTest.com' and password as 'wrongPassword'
@@ -53,7 +53,7 @@ And User selects the gender as 'Frau'
 And User enters the email adress generated randomly with current Date and Time
 And User enters the password as 'Welcome@1234'
 And User clicks the submit registration button
-Then User should be created and logged in with first name as 'fname'
+Then User should be logged in with first name as 'fname'
 
 
 
